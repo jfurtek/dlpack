@@ -58,6 +58,7 @@ add_executable(mock ${DLPACK_MOCK_SRCS})
 
 add_library(dlpack INTERFACE)
 add_library(${PROJECT_NAME}::dlpack ALIAS dlpack)
+target_include_directories(dlpack INTERFACE $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>)
 
 # Installation (https://github.com/forexample/package-example) {
 
